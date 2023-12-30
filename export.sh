@@ -2,7 +2,7 @@
 
 FILENAME=$(basename $1 .org)
 TEMPORARY_DIR=/tmp/notes-$(date +%s)-$RANDOM
-OUTPUT=./output 
+OUTPUT="${2:-"./output"}"
 INPUT="$1"
 
 cp -r "$INPUT" $TEMPORARY_DIR
