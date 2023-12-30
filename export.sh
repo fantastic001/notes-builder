@@ -49,5 +49,7 @@ find $TEMPORARY_DIR -maxdepth 1 -type d  | while read mydir; do
     fi 
 done 
 
+echo "Generated on $(date +%Y-%m-%d) at $(date +%H:%M:%S)" > $OUTPUT/RELEASE.txt
+
 rm -rf $TEMPORARY_DIR
 # latex -interaction nonstopmode -halt-on-error -file-line-error $FILENAME.tex
